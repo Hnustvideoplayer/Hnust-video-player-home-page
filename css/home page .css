@@ -14,8 +14,16 @@
 }
 
 .c4{
-    width: 500px;
     font-size: large;
     color: deepskyblue;
-    left: 80%;
+}
+
+.c5{
+    font-size: large;
+    color: deepskyblue;
+}
+
+.c6{
+    width: 500px;
+    margin-left: 0px;
 }
