@@ -1,11 +1,10 @@
 .c1{
     color: chartreuse;
-    width: 500px;
 }
 
 .c2{
     color: aqua;
-    width: 500px;
+    width: 10%;
 }
 
 .c3{
@@ -24,6 +23,5 @@
 }
 
 .c6{
-    width: 500px;
     margin-left: 0px;
 }
