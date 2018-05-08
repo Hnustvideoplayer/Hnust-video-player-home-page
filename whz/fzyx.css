@@ -1,0 +1,74 @@
+/*��3��Ԫ  ��Ŀ3-1 �������*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F7;
+}
+header,.items{
+    margin-bottom: 20px;
+    width: 1250px;
+    height: 400px;
+    padding-left: 20px;
+    margin: 10px auto;
+}
+.items {
+    height: 320px;
+}
+.p {
+    background-color: #2A809D;
+    height: 320px;
+    background-image: linear-gradient(
+            to bottom,
+            #ab4aff 20%,
+            #ff1f20 80%
+    );/*���ø�Ԫ�ر������϶��µ����Խ���*/
+    font-family: 'Microsoft Yahei';/*��������Ϊ΢���ź�*/
+    font-size:30px;
+    font-weight:bold;
+    color:#fff;
+    padding-top:40px;
+    line-height:30px;/*�ı��и�Ϊ30px*/
+}
+.item {
+    width: 230px;
+    height: 300px;
+    text-align: center;/*����ˮƽ����*/
+    margin-right: 20px;
+    background-color:gray;
+    float: left;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    transition: all .5s;/*Css3�����������ԣ����ɣ�all(Ĭ��ֵ)ָ�������Ըı䣬����ת��������0.5s����ɡ�*/
+    box-shadow: red 0px 3px 20px ;/*��ǿ�ȷ�Ч�� ����Ӱ������ƫ��5pxģ��ֵ5px��ɫΪ#41a8ff*/
+}
+.pic {
+    margin-top: -15px;
+    margin-left: -35px;
+
+}
+.desc {
+    position: absolute;/*���Զ�λ*/
+    bottom: -100px;
+    width: 100%;/*����Ǹ�Ԫ�ؿ�ȵ�100%*/
+    height: 100px;
+    background-color: #28f029;
+    transition: all .5s;
+    background-color: rgba(240, 123, 96, 0.8);
+
+}
+/*�������ͣ�ڸ�Ԫ��ʱ����Ԫ�ؾ��Զ�λ�ڸ�Ԫ�ض���-5px��λ�ã����Һ���ӰΪģ����15px��#AAAɫ*/
+.item:hover {
+    top: -5px;
+    box-shadow: 0 0 15px #AAA;
+}
+/*�������ͣ������Ϊitem��Ԫ����ʱ����Ԫ�ص�����Ϊ.desc����Ԫ�ؾ��Զ�λ����ײ��븸Ԫ�صײ�����*/
+.item:hover .desc {
+    bottom: 0;
+}
+.detail{
+    font-weight: bold;
+    font-size: 20px;
+   margin-top: 50px;
+}
+.detail i{color: red;}
