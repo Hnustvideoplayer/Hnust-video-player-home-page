@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>用户登录</title>
+  <link rel="stylesheet" href="dlcss.css" media="screen" type="text/css" />
+  <script type="text/javascript">
+    function getValue()
+    {
+      var x=document.getElementById("password");
+      var a="123456";
+      if(a== x.value)
+      {
+        window.location.href="";
+      }
+      else
+      {alert("Wrong");}
+    }
+  </script>
+</head>
+<body>
+<form>
+  <div class="border_radius"></div>
+  <input type="text" name="name" placeholder="用户名" id="user"/>
+  <input type="password" name="password" placeholder="密码" id="password" />
+  <input type="button" name="button" value="登录" class="btn" onclick="getValue()">
+
+</form>
+</body>
+</html>
