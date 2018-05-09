@@ -127,20 +127,20 @@ a.button:active {
     text-align: center;
 }
 .mission-container{
-    margin-top: 35px;
+    margin-top: 5px;
 }
 .mission_div{
     width: 50%;
     float: left;
     position: relative;
     min-height: 1px;
-    padding:0 15px;
+    padding:0 5px;
 }
 .mission-left img {
     width: 100%;
 }
 .mis-one {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 .mis-left {
     width: 15%;

@@ -1,10 +1,23 @@
-.c1{
+@font-face {
+    font-family: my123;
+    src: url('ml.TTF');
+}
+.c1 {
     color: chartreuse;
+    font-size: larger;
+    font-family: my123;
+}
+.c2{
+    color: fuchsia;
+    font-size: larger;
+    font-family: my123;
 }
 
-.c2{
-    color: aqua;
-    width: 10%;
+a:hover{
+    color: white;
+}
+a:active{
+    color: #e5e5e5;
 }
 
 .c3{
@@ -25,3 +38,4 @@
 .c6{
     margin-left: 0px;
 }
+
