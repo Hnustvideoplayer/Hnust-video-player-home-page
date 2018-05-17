@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>弹性盒布局</title>
+    <style>
+        body {
+            font: 24px Helvetica;
+            background: #fff;
+        }
+        .main {
+            max-width: 1145px;
+            min-height: 330px;
+            margin: 0px;
+            padding: 0px;
+            display: flex;/*设置该div为一个弹性盒容器*/
+            flex-flow: row;/*子元素按横轴方向顺序排列*/
+        }
+        .main > article {
+            margin: 4px;
+            padding: 5px;
+            border-radius: 7pt;/*pt也是文字大小的一种单位，1pt=px*3/4 */
+            background: #719DCA;
+            flex: 1 ;/*用数字也可以达到分配宽度的效果，将容器分为5份，占3份*/
+            order: 1;/*排序为第2个子元素*/
+        }
+        .main > nav {
+            margin: 4px;
+            padding: 5px;
+            border-radius: 7pt;
+            background: #FFBA41;
+            flex: 1 ;/*将容器分为5份，占1份*/
+            order: 2;/*排序为第1个子元素*/
+        }
+        .main > aside {
+            margin: 4px;
+            padding: 5px;
+            border-radius: 7pt;
+            background: #FFBA41;
+            flex: 1 ;/*将容器分为5份，占1份*/
+            order: 3;/*排序为第3个子元素*/
+        }
+        .main > other {
+            margin: 4px;
+            padding: 5px;
+            border-radius: 7pt;
+            background: #FFBA41;
+            flex: 1 ;/*将容器分为5份，占1份*/
+            order: 4;/*排序为第3个子元素*/
+        }
+        header {
+            display: block;
+            margin: 4px;
+            padding: 5px;
+            min-height: 300px;
+            max-width: 1145px;
+            border: 2px solid #FFBA41;
+            border-radius: 7pt;
+            background: #FFF;
+        }
+        .massion img{
+            width: 100%;
+            margin: 4px;
+            padding: 5px;
+        }
+        .art {
+            text-align: center;/*文字水平居中*/
+            margin-right: 20px;
+            background-color:gray;
+            float: left;
+            position: relative;
+            top: 0;
+            overflow: hidden;
+            transition: all .5s;/*Css3新增动画属性：过渡，all(默认值)指所有属性改变，整个转换过程在0.5s内完成。*/
+        }
+        .massion {
+            margin-top: -15px;
+            margin-left: -35px;
+        }
+        .desc {
+            position: absolute;/*绝对定位*/
+            bottom: -100px;
+            width: 100%;/*宽度是父元素宽度的100%*/
+            height: 100px;
+            background-color: #58A6F0;
+            transition: all .5s;
+            background-color: rgba(88,166,240,0.8);
+        }
+        /*当鼠标悬停在该元素时，该元素绝对定位在父元素顶部-5px的位置，并且盒阴影为模糊度15px的#AAA色*/
+        .art:hover {
+            top: -5px;
+            box-shadow: 0 0 15px #AAA;
+        }
+        /*当鼠标悬停在类名为item的元素上时，该元素的类名为.desc的子元素绝对定位，其底部与父元素底部对齐*/
+        .art:hover .desc {
+            bottom: 0;
+        }
+        .detail{
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+        .detail i{color: red;}
+        @media all and (max-width: 660px) {/*当屏幕小于640px时*/
+            .main {
+                flex-flow: column; /*弹性盒中的子元素按纵轴方向排列*/
+            }
+            .main > article, .main > nav, .main > aside ,.main > other{
+                order: 0; /*将子元素都设置成同一个值，指按自然顺序排列*/
+            }
+        }
+    </style>
+</head>
+<body>
+<header><div class="massion"><img src="2bf643bdbfb922434a59481bf71ecc95.png"  width="265" height="330" alt=""></header>
+<div class="main">
+    <article class="art"><div class="massion"><img src="834b2615bfbaf5ec72f1e22edfa1b1f6.jpg"  width="265" height="320" alt=""></div>
+        <div class="desc">
+            <div class="detail"><i>创造101</i>.高颜值
+                <a href="#" >追片</a>
+            </div>
+        </div></article>
+    <nav  class="art"><div class="massion"><img src="98b56bff04e7d74b53c25f958a9223ff.jpg"width="250" height="340" alt="抱歉无法显示"></div>
+        <div class="desc">
+            <div class="detail"><i>我是大侦探</i>杨幂短裙出场邓伦看花眼
+                <a href="#" color="yellow">
+                    追剧
+                </a>
+            </div>
+        </div></nav>
+    <aside class="art"><div class="massion"><img src="d79a5ed7240acbf21af6919e96bf1ce3.jpeg" width="265" height="320" alt="抱歉无法显示"></div>
+        <div class="desc"> <div class="detail"><i>奔跑吧.扔沙包</i>太囧！陈赫baby百发零中
+            <a href="#" >追片</a>
+        </div>
+        </div></aside>
+    <other class="art"><div class="massion"> <img src="e8c6b5175713731bbd422fa0de7fd2c2.jpeg"width="265" height="320" alt=""></div>
+        <div class="desc"> <div class="detail"><i>极限挑战第四季</i>艺考失败！黄渤尬演惨遭diss
+            <a href="#" >追剧</a>
+        </div>
+        </div></other>
+</div>
+<div class="main">
+    <article class="art"><div class="massion"><img src="u=457344166,290549141&fm=27&gp=0.jpg" width="265" height="320" alt=""></div>
+        <div class="desc"> <div class="detail"><i>高能少年团2.独制</i>已完结24集
+            <a href="#" >追番</a>
+        </div>
+        </div></article>
+    <nav class="art"><div class="massion"><img src="cf65aef95ba5988ab28c82f8da3239ea.jpg" width="265" height="320" alt=""></div>
+        <div class="desc"> <div class="detail"><i>跨界歌王.第三季</i>李亚鹏徐静蕾再现《将爱》
+            <a href="#" >追片</a>
+        </div>
+        </div></nav>
+    <aside class="art"><div class="massion"><img src="01396a5039b576fa47d80d3d12651df1.jpg"  width="265" height="320" alt=""></div>
+        <div class="desc">
+            <div class="detail"><i>异口同声</i>冯提莫谈童年模仿神奇宝贝
+                <a href="#" >追片</a>
+            </div>
+        </div></aside>
+    <other class="art"><div class="massion"><img src="2bdcc3e02f04214f2e2dd8e88f29d03b.jpg" width="265" height="320" alt=""></div>
+        <div class="desc"> <div class="detail"><i>无限歌谣季</i>岳云鹏喊话薛之谦：别碰我
+            <a href="#" >追片</a>
+        </div>
+        </div></other>
+</div>
+
+</body>
+</html>
