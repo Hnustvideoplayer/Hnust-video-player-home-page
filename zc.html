@@ -7,15 +7,15 @@
 </head>
 <body background="picture/seaandsun.jpg">
 <p align="center" style="color: yellow">用户注册</p>
-<form action="#" method="post" name="search" autocomplete="true">
+<form action="dl.html" method="post" name="search" autocomplete="true">
     <table align="center" cellspacing="10" cellpadding="10">
         <tr>
             <td style="color: yellow">用户名：</td>
-            <td><input type="text" ></td>
+            <td><input type="text" required></td>
         </tr>
         <tr>
             <td style="color: yellow">密码：</td>
-            <td><input type="password" size="20"></td>
+            <td><input type="password" size="20" required></td>
         </tr>
         <tr>
             <td style="color: yellow">性别：</td>
@@ -25,11 +25,19 @@
         </tr>
         <tr>
             <td style="color: yellow">出身年月：</td>
-            <td><input type="text"></td>
+            <td><input type="text" required></td>
         </tr>
         <tr>
             <td style="color: yellow">颜色：</td>
             <td><input type="color" value="#ff0000"></td>
+        </tr>
+        <tr>
+            <td style="color: yellow">邮箱：</td>
+            <td><input type="email" name="formmail" required/></td>
+        </tr>
+        <tr>
+            <td style="color: yellow">邮编：</td>
+            <td><input type="text" pattern="[1-9]d{5}(?!d)" name="postcode" required/></td>
         </tr>
         <tr>
             <td style="color: yellow">上传头像：</td>

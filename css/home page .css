@@ -39,3 +39,9 @@ a:active{
     margin-left: 0px;
 }
 
+.c11{
+    width: auto;
+    height: auto;
+    display: block;
+    filter: blur(20px);
+}
